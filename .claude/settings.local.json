@@ -1,0 +1,11 @@
+{
+  "permissions": {
+    "allow": [
+      "PowerShell(ffmpeg -version 2>$null)",
+      "WebFetch(domain:github.com)",
+      "PowerShell(ffprobe -v quiet -print_format json -show_streams \"E:\\\\Josue Munro\\\\Documents\\\\Projects\\\\WebDune\\\\Webdune Diaries\\\\Assets\\\\Webdune Diaries Title - White Text.png\" 2>$null | ConvertFrom-Json | ForEach-Object { \"$\\($_.streams[0].width\\)x$\\($_.streams[0].height\\)\" })",
+      "PowerShell(Test-Path \"$env:USERPROFILE\\\\Developer\")",
+      "PowerShell(Test-Path \"E:\\\\Josue Munro\\\\Documents\\\\Projects\\\\WebDune\\\\Webdune Diaries\\\\Assets\\\\fonts\\\\Figtree-SemiBold.ttf\"; \\(Get-Item \"E:\\\\Josue Munro\\\\Documents\\\\Projects\\\\WebDune\\\\Webdune Diaries\\\\Assets\\\\fonts\\\\Figtree-SemiBold.ttf\"\\).Length)"
+    ]
+  }
+}

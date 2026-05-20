@@ -1,0 +1,113 @@
+[Script Info]
+Title: Webdune Diaries S01E01
+ScriptType: v4.00+
+PlayResX: 1080
+PlayResY: 1920
+WrapStyle: 0
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Default,Figtree SemiBold,60,&H00FFFFFF,&H000000FF,&H00000000,&H80000000,0,0,0,0,100,100,0,0,1,4,1,2,40,40,350
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.00,0:00:00.76,Default,,0,0,0,,Hello there.
+Dialogue: 0,0:00:00.76,0:00:01.93,Default,,0,0,0,,I'm Josue. I'm
+Dialogue: 0,0:00:01.93,0:00:02.71,Default,,0,0,0,,a web
+Dialogue: 0,0:00:02.71,0:00:03.88,Default,,0,0,0,,designer and developer
+Dialogue: 0,0:00:03.88,0:00:05.05,Default,,0,0,0,,from New Zealand.
+Dialogue: 0,0:00:05.05,0:00:05.87,Default,,0,0,0,,I work freelance.
+Dialogue: 0,0:00:05.87,0:00:06.42,Default,,0,0,0,,I jump
+Dialogue: 0,0:00:06.42,0:00:07.24,Default,,0,0,0,,into agencies and
+Dialogue: 0,0:00:07.24,0:00:08.06,Default,,0,0,0,,help them out
+Dialogue: 0,0:00:08.06,0:00:08.87,Default,,0,0,0,,or work directly
+Dialogue: 0,0:00:08.87,0:00:09.67,Default,,0,0,0,,with, my own
+Dialogue: 0,0:00:09.67,0:00:10.47,Default,,0,0,0,,clients as well.
+Dialogue: 0,0:00:10.47,0:00:11.50,Default,,0,0,0,,I'm making a
+Dialogue: 0,0:00:11.50,0:00:12.52,Default,,0,0,0,,new series called
+Dialogue: 0,0:00:12.52,0:00:13.54,Default,,0,0,0,,Webdune Diaries. Webdune
+Dialogue: 0,0:00:13.54,0:00:14.21,Default,,0,0,0,,is the trading
+Dialogue: 0,0:00:14.21,0:00:14.65,Default,,0,0,0,,name of
+Dialogue: 0,0:00:14.65,0:00:15.09,Default,,0,0,0,,the business
+Dialogue: 0,0:00:15.09,0:00:15.84,Default,,0,0,0,,I work under.
+Dialogue: 0,0:00:15.84,0:00:16.58,Default,,0,0,0,,it's just me.
+Dialogue: 0,0:00:16.58,0:00:17.32,Default,,0,0,0,,It's nothing fancy.
+Dialogue: 0,0:00:17.32,0:00:18.28,Default,,0,0,0,,Webdune Diaries is
+Dialogue: 0,0:00:18.28,0:00:19.24,Default,,0,0,0,,all about what
+Dialogue: 0,0:00:19.24,0:00:20.19,Default,,0,0,0,,goes on behind
+Dialogue: 0,0:00:20.19,0:00:21.15,Default,,0,0,0,,the scenes. I
+Dialogue: 0,0:00:21.15,0:00:22.10,Default,,0,0,0,,feel like when
+Dialogue: 0,0:00:22.10,0:00:23.06,Default,,0,0,0,,I started, there
+Dialogue: 0,0:00:23.06,0:00:24.01,Default,,0,0,0,,wasn't many people,
+Dialogue: 0,0:00:24.01,0:00:25.33,Default,,0,0,0,,talking transparently about
+Dialogue: 0,0:00:25.33,0:00:26.20,Default,,0,0,0,,the difficulties
+Dialogue: 0,0:00:26.20,0:00:27.24,Default,,0,0,0,,of being a
+Dialogue: 0,0:00:27.24,0:00:28.27,Default,,0,0,0,,freelancer, especially in
+Dialogue: 0,0:00:28.27,0:00:29.18,Default,,0,0,0,,the web world.
+Dialogue: 0,0:00:29.18,0:00:29.98,Default,,0,0,0,,so I wanted
+Dialogue: 0,0:00:29.98,0:00:30.52,Default,,0,0,0,,to, wanna
+Dialogue: 0,0:00:30.52,0:00:31.05,Default,,0,0,0,,start a
+Dialogue: 0,0:00:31.05,0:00:31.85,Default,,0,0,0,,series talking about
+Dialogue: 0,0:00:31.85,0:00:32.65,Default,,0,0,0,,that sort of
+Dialogue: 0,0:00:32.65,0:00:33.45,Default,,0,0,0,,stuff, get things
+Dialogue: 0,0:00:33.45,0:00:34.25,Default,,0,0,0,,off my chest.
+Dialogue: 0,0:00:34.25,0:00:35.05,Default,,0,0,0,,Problem shared is
+Dialogue: 0,0:00:35.05,0:00:35.85,Default,,0,0,0,,a problem halved,
+Dialogue: 0,0:00:35.85,0:00:36.65,Default,,0,0,0,,so you know,
+Dialogue: 0,0:00:36.65,0:00:37.45,Default,,0,0,0,,taxes and GST
+Dialogue: 0,0:00:37.45,0:00:38.52,Default,,0,0,0,,and upcoming bills
+Dialogue: 0,0:00:38.52,0:00:39.57,Default,,0,0,0,,and those
+Dialogue: 0,0:00:39.57,0:00:40.61,Default,,0,0,0,,moments of,
+Dialogue: 0,0:00:40.61,0:00:41.42,Default,,0,0,0,,feast and famine.
+Dialogue: 0,0:00:41.42,0:00:41.95,Default,,0,0,0,,That happens
+Dialogue: 0,0:00:41.95,0:00:42.75,Default,,0,0,0,,a lot with
+Dialogue: 0,0:00:42.75,0:00:43.55,Default,,0,0,0,,freelancing, those famine
+Dialogue: 0,0:00:43.55,0:00:44.36,Default,,0,0,0,,moments are tough,
+Dialogue: 0,0:00:44.36,0:00:45.16,Default,,0,0,0,,like so many
+Dialogue: 0,0:00:45.16,0:00:45.96,Default,,0,0,0,,times I wanted
+Dialogue: 0,0:00:45.96,0:00:46.76,Default,,0,0,0,,to just fully,
+Dialogue: 0,0:00:46.76,0:00:47.34,Default,,0,0,0,,quit. So it'll
+Dialogue: 0,0:00:47.34,0:00:47.92,Default,,0,0,0,,be interesting to
+Dialogue: 0,0:00:47.92,0:00:48.51,Default,,0,0,0,,talk more about
+Dialogue: 0,0:00:48.51,0:00:49.09,Default,,0,0,0,,that sort of
+Dialogue: 0,0:00:49.09,0:00:49.67,Default,,0,0,0,,stuff and then
+Dialogue: 0,0:00:49.67,0:00:50.25,Default,,0,0,0,,also talk about
+Dialogue: 0,0:00:50.25,0:00:50.83,Default,,0,0,0,,the stuff I've
+Dialogue: 0,0:00:50.83,0:00:51.41,Default,,0,0,0,,learned along the
+Dialogue: 0,0:00:51.41,0:00:51.99,Default,,0,0,0,,way. My notes
+Dialogue: 0,0:00:51.99,0:00:52.57,Default,,0,0,0,,are over here.
+Dialogue: 0,0:00:52.57,0:00:53.49,Default,,0,0,0,,it says season
+Dialogue: 0,0:00:53.49,0:00:54.41,Default,,0,0,0,,one, this is
+Dialogue: 0,0:00:54.41,0:00:55.33,Default,,0,0,0,,gonna be broken
+Dialogue: 0,0:00:55.33,0:00:56.24,Default,,0,0,0,,down into seasons,
+Dialogue: 0,0:00:56.24,0:00:56.92,Default,,0,0,0,,just to keep
+Dialogue: 0,0:00:56.92,0:00:57.38,Default,,0,0,0,,like a
+Dialogue: 0,0:00:57.38,0:00:57.83,Default,,0,0,0,,goal per
+Dialogue: 0,0:00:57.83,0:00:58.51,Default,,0,0,0,,season, keep some
+Dialogue: 0,0:00:58.51,0:00:59.19,Default,,0,0,0,,sort of continuity.
+Dialogue: 0,0:00:59.19,0:01:00.11,Default,,0,0,0,,the first season
+Dialogue: 0,0:01:00.11,0:01:01.03,Default,,0,0,0,,is about me
+Dialogue: 0,0:01:01.03,0:01:01.95,Default,,0,0,0,,wanting to build
+Dialogue: 0,0:01:01.95,0:01:02.87,Default,,0,0,0,,a website for
+Dialogue: 0,0:01:02.87,0:01:03.79,Default,,0,0,0,,Fox Stevenson. He's
+Dialogue: 0,0:01:03.79,0:01:04.71,Default,,0,0,0,,a favourite, music
+Dialogue: 0,0:01:04.71,0:01:05.63,Default,,0,0,0,,artist of mine.
+Dialogue: 0,0:01:05.63,0:01:06.55,Default,,0,0,0,,I'd love to
+Dialogue: 0,0:01:06.55,0:01:07.47,Default,,0,0,0,,upgrade his website
+Dialogue: 0,0:01:07.47,0:01:08.39,Default,,0,0,0,,big time, and
+Dialogue: 0,0:01:08.39,0:01:09.31,Default,,0,0,0,,bring way more
+Dialogue: 0,0:01:09.31,0:01:10.22,Default,,0,0,0,,personality to it.
+Dialogue: 0,0:01:10.22,0:01:11.14,Default,,0,0,0,,The last talking
+Dialogue: 0,0:01:11.14,0:01:12.06,Default,,0,0,0,,point is, I
+Dialogue: 0,0:01:12.06,0:01:12.98,Default,,0,0,0,,don't wanna keep
+Dialogue: 0,0:01:12.98,0:01:13.90,Default,,0,0,0,,this too long,
+Dialogue: 0,0:01:13.90,0:01:14.52,Default,,0,0,0,,tomorrow's episode,
+Dialogue: 0,0:01:14.52,0:01:15.15,Default,,0,0,0,,I'm gonna
+Dialogue: 0,0:01:15.15,0:01:16.08,Default,,0,0,0,,try to do
+Dialogue: 0,0:01:16.08,0:01:17.02,Default,,0,0,0,,them daily, tomorrow's
+Dialogue: 0,0:01:17.02,0:01:17.95,Default,,0,0,0,,is about where
+Dialogue: 0,0:01:17.95,0:01:18.88,Default,,0,0,0,,I'm actually at,
+Dialogue: 0,0:01:18.88,0:01:19.82,Default,,0,0,0,,what's going on
+Dialogue: 0,0:01:19.82,0:01:20.75,Default,,0,0,0,,in my business.
+Dialogue: 0,0:01:20.75,0:01:21.66,Default,,0,0,0,,yeah, see
+Dialogue: 0,0:01:21.66,0:01:22.56,Default,,0,0,0,,you tomorrow.

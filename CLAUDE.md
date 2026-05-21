@@ -26,6 +26,7 @@ Honest, self-deprecating, fun. Not corporate. Real talk about IRD, scope creep, 
 - 9:16 vertical, 1080×1920
 - Under 90 seconds for maximum platform reach via API
 - H.264 video, AAC audio, MP4 container
+- Render at CRF 26 (platforms re-encode anyway, ~30 MB for 80s vs ~110 MB at CRF 18)
 
 ## Series Structure
 
@@ -40,54 +41,80 @@ Honest, self-deprecating, fun. Not corporate. Real talk about IRD, scope creep, 
 - `Assets/Webdune Diaries Title - White Text.png` — Title card with white "web" and gold "dune" text + "diaries" subtitle (802×277, transparent). Use for dark/busy backgrounds.
 - `Assets/Webdune Diaries Title - Black Text.png` — Same layout, black text variant. Use for light backgrounds.
 - `Assets/Animated Season Title - Static.png` — Season/episode badge (528×463): colourful pinwheel circle, pixelated "SEASON" header, gold season number, "Episode" label, episode number in white pill, Webdune logomark. Contains "001" text.
-- `Assets/Animated Season Title - Static, no episode text.png` — Same badge without episode number text — use as base layer and overlay animated/rendered episode number on top.
+- `Assets/Animated Season Title - Static, no episode text.png` — Same badge without episode number text.
+- `Assets/Animated Season Title - No Pill.png` — Badge with the white pill area removed (transparent). Used as the base layer for the HyperFrames slot-machine animation.
 
-**Title card positioning**: 130px from top of frame (user-confirmed), centred horizontally. Scale to fit 1080-wide frame.
+**Title card positioning**: 130px from top of frame (user-confirmed), centred horizontally. Scale to ~900px wide.
 
-**Season animation strategy**: Use the no-episode-text static image as the base. Animate only the episode number (e.g. "001") counting up — Figtree Bold at 76px. Use HyperFrames or PIL for the number animation.
+**Season animation strategy**: Use the "No Pill" badge PNG as the base. The episode number is rendered as a slot-machine ticker animation using HyperFrames (HTML/CSS/GSAP) — three digit reels cascade left-to-right with `back.out` easing, landing on the episode number. Rendered to a green-screen MP4, chroma-keyed to transparency, and composited onto the badge via `build_ticker.py`. The whole badge+animation fades in/out as one unit.
 
-The title card fades in first, then the season animation plays straight after in the top third of the frame. These two elements are the entire intro — no other overlays needed.
+**Badge positioning**: x=336, y=89 on 1080×1920 canvas. These offsets centre the **circle** (not the PNG bounds) — from Figma, 336px left margin and 224px right margin.
+
+The title card and season badge are placed at **human-specified timestamps** — they are NOT a fixed intro sequence. The human tells us when each overlay appears based on what feels right in the edit.
 
 ## Production Pipeline
 
-### Step 1: Inventory footage
-When I drop raw footage into a folder and say "edit this" or "new episode":
-1. Run `video-use` to inventory and transcribe all source files
-2. Show me the transcript summary and proposed strategy
-3. Wait for my approval before cutting
+Every episode follows this flow. Each **→ human check** is a gate — don't proceed without approval.
 
-### Step 2: Edit with video-use
-After I approve the strategy:
-1. Cut filler words (umm, uh, false starts, dead air)
-2. Colour grade — conservative by default. Ask before applying. Options: `warm_cinematic` (subtle), `neutral_punch` (minimal), or `none`. Don't go heavy-handed.
-3. Burn subtitles (see Subtitle Style below)
-4. Apply 30ms audio fades at every cut
+### Step 1: Transcribe → human check
+1. Transcribe source footage with ElevenLabs Scribe → `transcript_raw.json`
+2. Apply TEXT_CORRECTIONS (see Transcript Corrections table)
+3. Show human the transcript for review
+4. **video-use** can help here: use the `transcribe.py` helper for transcription
 
-### Step 3: Add Webdune Diaries intro
-After the base edit, composite the intro sequence:
+### Step 2: First cut → human check
+1. AI proposes filler/stutter cuts (generate a `CUT_INDICES` set or use video-use's strategy)
+2. Show human the proposed cut list with context (what's being cut and why)
+3. Human approves/adjusts the cut list
+4. Run `build_edit.py` to extract segments, concat → `cut_no_subs.mp4`
+5. Human reviews the base edit video
 
-1. **Title card** (0s–4.5s): Fade in `assets/title_card.png` over 0–1.5s, hold 1.5–3.5s, fade out 3.5–4.5s. Full-frame overlay.
-2. **Season animation** (4.5s onward): Composite `assets/season_overlay.mp4` starting at 4.5s, positioned in the top third of the frame, for its full duration. If the file doesn't exist, skip this step.
+**Per-episode work**: The cut list is the main manual step (~15-30 min to review). Everything else is automated. `build_edit.py` handles: segment extraction with 30ms audio fades, lossless concat, and ASS subtitle generation.
 
-Example ffmpeg for title card:
+### Step 3: Human provides overlay timings
+Human watches the base edit and specifies:
+- **Title card timestamp**: e.g. "title at 14s"
+- **Season badge timestamp**: e.g. "badge at 60s"
+
+These vary per episode — there is no fixed position.
+
+### Step 4: Render overlays + burn subtitles → human check
+Run the single-command final render:
+
 ```bash
-ffmpeg -i edit/final.mp4 -i assets/title_card.png \
-  -filter_complex "[1:v]format=rgba,fade=in:st=0:d=1.5:alpha=1,fade=out:st=3.5:d=1:alpha=1[ovr];[0:v][ovr]overlay=0:0:enable='between(t,0,4.5)'" \
-  -c:a copy edit/with_intro.mp4
+python build_final.py --title-at 12 --badge-at 61 --episode 1
 ```
 
-For season animation MP4:
+This does everything in two ffmpeg passes:
+1. **Composites overlays** onto `cut_no_subs.mp4` → `with_overlays.mp4`
+   - Title card: infinite `-loop 1` with absolute fade timestamps (1.5s in, 2s hold, 1s out)
+   - Badge: pre-rendered PNG sequence from `build_ticker.py` via `-itsoffset`
+2. **Burns subtitles** from `subs.ass` → `final.mp4`
+
+If ticker frames don't exist yet, `build_final.py` auto-runs `build_ticker.py` first.
+
+**Key ffmpeg details** (documented here so future agents don't re-learn them):
+- Title uses `-loop 1` (no `-t`) with absolute `fade=in:st=T:d=1.5:alpha=1` timestamps. Do NOT use `-itsoffset` for static images — it doesn't work reliably with looped inputs.
+- Badge uses `-itsoffset {badge_at}` before the PNG sequence input to shift it in time.
+- Both overlays use `eof_action=pass` so the main video continues after the overlay ends.
+
+### Step 6: Publish
+After human approves the final cut, run `/post {episode_number}` or:
 ```bash
-ffmpeg -i edit/with_intro.mp4 -i assets/season_overlay.mp4 \
-  -filter_complex "[1:v]scale=1080:-1[ovr];[0:v][ovr]overlay=(W-w)/2:100:enable='between(t,4.5,4.5+DURATION)'" \
-  -c:a copy edit/final_with_overlays.mp4
+python scripts/publish.py --episode 1 --caption "your caption here"
 ```
 
-### Step 4: Publish
-After I approve the final cut:
-1. Use Upload-Post MCP to publish to Instagram Reels, YouTube Shorts, and TikTok simultaneously
-2. Generate a platform-appropriate caption: casual tone, relevant hashtags (#webdune #webdesign #agencylife #buildingInPublic #webdunediaries), tag @foxstevenson where relevant
-3. Confirm publication with links
+Publishes to Instagram Reels + YouTube via Upload-Post API. TikTok requires paid tier — only include if explicitly requested.
+
+Caption tone: casual, honest, fun. Required hashtags: `#webdune #webdesign #agencylife #buildingInPublic #webdunediaries`. Tag `@foxstevenson` where relevant.
+
+### Pipeline scripts (per episode folder)
+- `build_edit.py` — Transcript-driven cut + subtitle generation + segment extraction
+- `build_ticker.py` — HyperFrames slot-machine animation: generates HTML for the episode number, renders via HyperFrames, chroma-keys green screen, composites onto badge, outputs positioned PNG sequence
+- `build_final.py` — Final render: composites title card + badge animation + burns subtitles onto the base edit
+- `ticker-anim/` — HyperFrames project (HTML/CSS/GSAP). Auto-generated by `build_ticker.py` — no manual editing needed
+
+**New episode setup**: Copy `build_edit.py`, `build_final.py`, `build_ticker.py`, and `ticker-anim/` to the new episode's `edit/` folder. Update `build_edit.py` constants (SOURCE path, CUT_INDICES). Everything else is parameterised.
 
 ## Subtitle Style
 
@@ -115,6 +142,31 @@ ElevenLabs Scribe consistently mis-transcribes these. Apply corrections before g
 
 Add to this table as new patterns emerge across episodes.
 
+## Claude Skills (slash commands)
+
+Two custom skills ship with this repo in `.claude/commands/`:
+
+- **`/edit {episode_number}`** — Runs the full production pipeline: transcribe → cut → overlay → final render. Pauses for human checks at transcript, cut list, overlay timings, and final review.
+- **`/post {episode_number}`** — Generates a caption, gets approval, then publishes to Instagram + YouTube via Upload-Post API.
+
+These are the primary interface for episode production. The human's job is to film footage, drop it in the episode folder, and run `/edit N`.
+
+## Social Post Format
+
+Every episode post follows this template. Only the title and description change per episode.
+
+```
+{Episode Title} | Webdune Diaries S{SS}E{EE}
+
+{Personal, conversational description. Speaks directly to the viewer. Ends with a friendly sign-off.}
+
+Season {N} Goal: convince {Fox Stevenson tag}, my favourite musician, to let me redesign his website 😮
+
+#webdunediaries #webdev #webdesign #buildingInPublic #freelancer
+```
+
+**Platform-specific tags**: Instagram uses `@foxstevenson`, YouTube uses `@FoxStevensonMusic`. Generate separate captions per platform when the tag differs.
+
 ## Episode Template Prompt
 
 When I say "new episode" with footage:
@@ -122,6 +174,7 @@ When I say "new episode" with footage:
 "Here's EP[XX] footage. Episode title: '[title]'.
 Edit, add intro overlays, and publish with caption: '[caption or auto-generate]'"
 ```
+Or just run `/edit {N}` — the skill handles the full flow.
 
 ## Tool Configuration
 
@@ -133,17 +186,22 @@ Edit, add intro overlays, and publish with caption: '[caption or auto-generate]'
 - All outputs go to `<footage_dir>/edit/`
 - Use video-use's process for all episode editing: inventory → transcribe → strategy → confirm → execute → verify
 
-### Upload-Post MCP
-- MCP endpoint: `mcp.upload-post.com`
-- Connected platforms: Instagram Reels, YouTube Shorts, TikTok
-- Publish to all three unless I say otherwise
-- Handles media format conversion and platform requirements automatically
+### Upload-Post (API + publish script)
+- API: `https://api.upload-post.com/api/upload` with `Authorization: Apikey {key}`
+- Publish script: `scripts/publish.py` — wraps the API with CLI args
+- Connected platforms: Instagram Reels, YouTube (TikTok requires paid tier)
+- Env vars: `UPLOAD_POST_API_KEY` and `UPLOAD_POST_USER` (profile name from dashboard)
+- **Upload method**: URL-based (not direct upload). Upload-Post ingests at ~190 KB/s with a 60s gateway timeout, so any video over ~11 MB times out on direct upload. The publish script uploads to a temp host first, then passes the URL to Upload-Post for server-to-server download.
+- **Current temp host**: tmpfile.link (free, no auth, 100 MB limit). **Planned migration**: Cloudflare R2 — Josue has a Cloudflare account. R2 has 10 GB free storage, no egress fees, and is trustworthy. Migrate when convenient to avoid privacy concerns with anonymous file hosts.
+- **Windows note**: Use `curl.exe` for HTTP requests, not Python `requests` — Python 3.11's bundled OpenSSL causes SSLEOFError with Upload-Post's server.
 
-### HyperFrames (optional, for generated animations)
-- Install: `npx hyperframes init`
-- Free, open source (Apache 2.0), runs locally
+### HyperFrames (core — renders the episode ticker animation)
+- Runs via `npx hyperframes render` (auto-installs, no global install needed)
+- Free, open source (Apache 2.0), runs locally with headless Chrome
 - No API key needed
+- Requires: Node.js 18+ and npm
 - Use instead of Remotion (which has commercial license restrictions)
+- The ticker-anim HyperFrames project is auto-generated by `build_ticker.py` — no manual HTML editing needed
 
 ## Required API Keys
 
@@ -152,9 +210,64 @@ Only two keys needed. Store in env vars or `.env` files, never hardcode:
 | Service | Env var | Where to get it | What it's for | Cost |
 |---------|---------|-----------------|---------------|------|
 | ElevenLabs | `ELEVENLABS_API_KEY` | elevenlabs.io/app/settings/api-keys | Scribe transcription | ~$0.40/hr (~$0.01/episode) |
-| Upload-Post | `UPLOADPOST_API_KEY` | upload-post.com dashboard | Multi-platform publishing | Free: 10 uploads/mo, $16/mo paid |
+| Upload-Post | `UPLOAD_POST_API_KEY` | app.upload-post.com → API Keys | Multi-platform publishing | Free: 10 uploads/mo, $16/mo paid |
+| Upload-Post | `UPLOAD_POST_USER` | app.upload-post.com → profile name | Identifies which connected accounts to use | — |
 
-Instagram, YouTube, and TikTok auth is handled by Upload-Post via OAuth — connect social accounts in their dashboard, not via API keys. HyperFrames and ffmpeg are local tools, no keys needed.
+Instagram and YouTube auth is handled by Upload-Post via OAuth — connect social accounts in their dashboard, not via API keys. TikTok requires Upload-Post paid tier. HyperFrames and ffmpeg are local tools, no keys needed.
+
+## Cross-Platform Setup
+
+The pipeline runs on Windows and macOS. Clone the repo, then install:
+
+### Both platforms
+| Tool | Purpose | Install |
+|------|---------|---------|
+| Python 3.10+ | Pipeline scripts | python.org or package manager |
+| ffmpeg + ffprobe | Video processing | `brew install ffmpeg` (Mac) or ffmpeg.org (Win) |
+| Node.js 18+ | HyperFrames render | `brew install node` (Mac) or nodejs.org (Win) |
+| Figtree font | Brand typography (subtitles + ticker) | fonts.google.com/specimen/Figtree → install system-wide |
+
+### Python packages
+```bash
+pip install -r requirements.txt    # Pillow, numpy
+```
+
+### API keys
+Copy `.env.example` to `.env` and add:
+```
+ELEVENLABS_API_KEY=your_key_here
+UPLOAD_POST_API_KEY=your_key_here
+UPLOAD_POST_USER=your_profile_name
+```
+
+### Mac-specific setup
+See **[SETUP_MAC.md](SETUP_MAC.md)** for detailed macOS instructions, Apple Silicon notes, and troubleshooting.
+
+### Verify setup
+```bash
+ffmpeg -version && ffprobe -version && node --version && python --version
+python -c "from PIL import Image; import numpy; print('OK')"
+npx --yes hyperframes@0.6.29 --version
+```
+
+## Episode 2+ Workflow
+
+For each new episode after the first:
+
+1. **Create episode folder**: `Season 1/Episode N/edit/`
+2. **Copy pipeline files** from Episode 1:
+   - `build_edit.py`, `build_final.py`, `build_ticker.py`
+   - `ticker-anim/` folder (HyperFrames project template + font)
+3. **Update `build_edit.py`**: Change `SOURCE` path and `CUT_INDICES` for the new footage
+4. **Run the pipeline**:
+   ```bash
+   python build_edit.py                                    # Step 1-2: transcribe + cut
+   # Watch cut_no_subs.mp4, choose overlay timings
+   python build_final.py --title-at T --badge-at B --episode N  # Step 4-5: overlays + subs
+   # Watch final.mp4, approve, then publish
+   ```
+
+The ticker animation is fully parameterised — `build_ticker.py 2` auto-generates the HyperFrames HTML with digit reels landing on "002", renders, and bakes onto the badge. No manual HTML editing needed.
 
 ## Overlay Generation
 

@@ -1,0 +1,121 @@
+[Script Info]
+Title: Webdune Diaries S01E02
+ScriptType: v4.00+
+PlayResX: 1080
+PlayResY: 1920
+WrapStyle: 0
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Default,Figtree SemiBold,60,&H00FFFFFF,&H000000FF,&H00000000,&H80000000,0,0,0,0,100,100,0,0,1,4,1,2,40,40,350
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.00,0:00:01.16,Default,,0,0,0,,Hello, everybody, and
+Dialogue: 0,0:00:01.16,0:00:01.95,Default,,0,0,0,,welcome to
+Dialogue: 0,0:00:01.95,0:00:03.12,Default,,0,0,0,,Episode 2 of
+Dialogue: 0,0:00:03.12,0:00:04.29,Default,,0,0,0,,the Webdune Diaries.
+Dialogue: 0,0:00:04.29,0:00:04.80,Default,,0,0,0,,Apologies if my
+Dialogue: 0,0:00:04.80,0:00:05.15,Default,,0,0,0,,voice sounds
+Dialogue: 0,0:00:05.15,0:00:05.50,Default,,0,0,0,,a little
+Dialogue: 0,0:00:05.50,0:00:06.02,Default,,0,0,0,,bit off, I
+Dialogue: 0,0:00:06.02,0:00:06.54,Default,,0,0,0,,was at a
+Dialogue: 0,0:00:06.54,0:00:07.06,Default,,0,0,0,,rave on Saturday
+Dialogue: 0,0:00:07.06,0:00:07.58,Default,,0,0,0,,so I'm feeling
+Dialogue: 0,0:00:07.58,0:00:08.10,Default,,0,0,0,,a little bit
+Dialogue: 0,0:00:08.10,0:00:08.62,Default,,0,0,0,,under the weather.
+Dialogue: 0,0:00:11.62,0:00:12.40,Default,,0,0,0,,to talk a
+Dialogue: 0,0:00:12.40,0:00:13.18,Default,,0,0,0,,bit about the
+Dialogue: 0,0:00:13.18,0:00:13.96,Default,,0,0,0,,history of Webdune,
+Dialogue: 0,0:00:13.96,0:00:14.35,Default,,0,0,0,,why I
+Dialogue: 0,0:00:14.35,0:00:14.75,Default,,0,0,0,,made it
+Dialogue: 0,0:00:14.75,0:00:15.55,Default,,0,0,0,,and where we're
+Dialogue: 0,0:00:15.55,0:00:16.09,Default,,0,0,0,,up to.
+Dialogue: 0,0:00:16.09,0:00:16.99,Default,,0,0,0,,What happened? A
+Dialogue: 0,0:00:16.99,0:00:17.90,Default,,0,0,0,,friend and I,
+Dialogue: 0,0:00:17.90,0:00:18.55,Default,,0,0,0,,Max and
+Dialogue: 0,0:00:18.55,0:00:19.21,Default,,0,0,0,,I, we
+Dialogue: 0,0:00:19.21,0:00:20.20,Default,,0,0,0,,had just finished
+Dialogue: 0,0:00:20.20,0:00:21.18,Default,,0,0,0,,our degrees in
+Dialogue: 0,0:00:21.18,0:00:22.17,Default,,0,0,0,,computer science at
+Dialogue: 0,0:00:22.17,0:00:23.15,Default,,0,0,0,,University of Otago,
+Dialogue: 0,0:00:23.15,0:00:24.14,Default,,0,0,0,,and we didn't
+Dialogue: 0,0:00:24.14,0:00:25.12,Default,,0,0,0,,wanna work for,
+Dialogue: 0,0:00:25.12,0:00:26.10,Default,,0,0,0,,a normal software
+Dialogue: 0,0:00:26.10,0:00:27.09,Default,,0,0,0,,company as a
+Dialogue: 0,0:00:27.09,0:00:28.07,Default,,0,0,0,,junior developer. We
+Dialogue: 0,0:00:28.07,0:00:29.06,Default,,0,0,0,,were like, "We
+Dialogue: 0,0:00:29.06,0:00:30.04,Default,,0,0,0,,like websites, they're
+Dialogue: 0,0:00:30.04,0:00:31.03,Default,,0,0,0,,fun to build.
+Dialogue: 0,0:00:31.03,0:00:31.75,Default,,0,0,0,,I've got some
+Dialogue: 0,0:00:31.75,0:00:32.23,Default,,0,0,0,,design skills.
+Dialogue: 0,0:00:32.23,0:00:32.96,Default,,0,0,0,,Max have got
+Dialogue: 0,0:00:32.96,0:00:33.68,Default,,0,0,0,,some coding skills.
+Dialogue: 0,0:00:33.68,0:00:34.18,Default,,0,0,0,,let's make some
+Dialogue: 0,0:00:34.18,0:00:34.69,Default,,0,0,0,,websites and make
+Dialogue: 0,0:00:34.69,0:00:35.19,Default,,0,0,0,,good money and
+Dialogue: 0,0:00:35.19,0:00:35.69,Default,,0,0,0,,it'll all be
+Dialogue: 0,0:00:35.69,0:00:36.20,Default,,0,0,0,,happy days and
+Dialogue: 0,0:00:36.20,0:00:36.70,Default,,0,0,0,,we'll be able
+Dialogue: 0,0:00:36.70,0:00:37.20,Default,,0,0,0,,to work out
+Dialogue: 0,0:00:37.20,0:00:37.71,Default,,0,0,0,,of our bedrooms."
+Dialogue: 0,0:00:37.71,0:00:38.17,Default,,0,0,0,,and five
+Dialogue: 0,0:00:38.17,0:00:38.64,Default,,0,0,0,,years later,
+Dialogue: 0,0:00:38.64,0:00:39.05,Default,,0,0,0,,it's kind
+Dialogue: 0,0:00:39.05,0:00:39.47,Default,,0,0,0,,of true.
+Dialogue: 0,0:00:39.47,0:00:40.09,Default,,0,0,0,,I'm working out
+Dialogue: 0,0:00:40.09,0:00:40.71,Default,,0,0,0,,of a garage.
+Dialogue: 0,0:00:40.71,0:00:41.33,Default,,0,0,0,,Look at that,
+Dialogue: 0,0:00:41.33,0:00:41.95,Default,,0,0,0,,bikes and stuff.
+Dialogue: 0,0:00:41.95,0:00:42.73,Default,,0,0,0,,the first year
+Dialogue: 0,0:00:42.73,0:00:43.51,Default,,0,0,0,,and a half
+Dialogue: 0,0:00:43.51,0:00:44.30,Default,,0,0,0,,was really tough.
+Dialogue: 0,0:00:44.30,0:00:45.08,Default,,0,0,0,,I had worked,
+Dialogue: 0,0:00:45.08,0:00:45.91,Default,,0,0,0,,from my parents'
+Dialogue: 0,0:00:45.91,0:00:46.75,Default,,0,0,0,,house a little
+Dialogue: 0,0:00:46.75,0:00:47.59,Default,,0,0,0,,bit, and then
+Dialogue: 0,0:00:47.59,0:00:48.42,Default,,0,0,0,,was living with
+Dialogue: 0,0:00:48.42,0:00:49.26,Default,,0,0,0,,friends for about
+Dialogue: 0,0:00:49.26,0:00:50.09,Default,,0,0,0,,a year and
+Dialogue: 0,0:00:50.09,0:00:50.93,Default,,0,0,0,,worked part time
+Dialogue: 0,0:00:50.93,0:00:51.76,Default,,0,0,0,,as a courier
+Dialogue: 0,0:00:51.76,0:00:52.60,Default,,0,0,0,,to pay rent
+Dialogue: 0,0:00:52.60,0:00:53.43,Default,,0,0,0,,and survive, and
+Dialogue: 0,0:00:53.43,0:00:54.27,Default,,0,0,0,,had a couple
+Dialogue: 0,0:00:54.27,0:00:55.11,Default,,0,0,0,,projects, two or
+Dialogue: 0,0:00:55.11,0:00:55.94,Default,,0,0,0,,three web projects,
+Dialogue: 0,0:00:55.94,0:00:56.78,Default,,0,0,0,,during that period
+Dialogue: 0,0:00:56.78,0:00:57.61,Default,,0,0,0,,of time and
+Dialogue: 0,0:00:57.61,0:00:58.45,Default,,0,0,0,,some smaller pieces.
+Dialogue: 0,0:00:58.45,0:00:58.96,Default,,0,0,0,,ended up
+Dialogue: 0,0:00:58.96,0:00:59.74,Default,,0,0,0,,getting paid $2
+Dialogue: 0,0:00:59.74,0:01:00.51,Default,,0,0,0,,an hour for
+Dialogue: 0,0:01:00.51,0:01:01.28,Default,,0,0,0,,the first two
+Dialogue: 0,0:01:01.28,0:01:02.06,Default,,0,0,0,,projects, which was
+Dialogue: 0,0:01:02.06,0:01:02.83,Default,,0,0,0,,pretty tough and
+Dialogue: 0,0:01:02.83,0:01:03.60,Default,,0,0,0,,that was based
+Dialogue: 0,0:01:03.60,0:01:04.38,Default,,0,0,0,,on bad quoting
+Dialogue: 0,0:01:04.38,0:01:05.15,Default,,0,0,0,,and just, like,
+Dialogue: 0,0:01:05.15,0:01:05.92,Default,,0,0,0,,much more learning
+Dialogue: 0,0:01:05.92,0:01:06.70,Default,,0,0,0,,than I expected.
+Dialogue: 0,0:01:06.70,0:01:07.51,Default,,0,0,0,,and then after
+Dialogue: 0,0:01:07.51,0:01:08.31,Default,,0,0,0,,that first year
+Dialogue: 0,0:01:08.31,0:01:09.12,Default,,0,0,0,,and a half
+Dialogue: 0,0:01:09.12,0:01:09.93,Default,,0,0,0,,of just battling
+Dialogue: 0,0:01:09.93,0:01:10.47,Default,,0,0,0,,to survive
+Dialogue: 0,0:01:10.47,0:01:11.02,Default,,0,0,0,,and learn,
+Dialogue: 0,0:01:11.02,0:01:12.07,Default,,0,0,0,,I got a
+Dialogue: 0,0:01:12.07,0:01:12.77,Default,,0,0,0,,job, a
+Dialogue: 0,0:01:12.77,0:01:13.83,Default,,0,0,0,,contract with N4
+Dialogue: 0,0:01:13.83,0:01:14.88,Default,,0,0,0,,Studio, they're now
+Dialogue: 0,0:01:14.88,0:01:15.46,Default,,0,0,0,,a massive
+Dialogue: 0,0:01:15.46,0:01:16.33,Default,,0,0,0,,web flow studio.
+Dialogue: 0,0:01:16.33,0:01:17.20,Default,,0,0,0,,That's the tool
+Dialogue: 0,0:01:17.20,0:01:18.07,Default,,0,0,0,,I often use
+Dialogue: 0,0:01:18.07,0:01:18.95,Default,,0,0,0,,for websites. I
+Dialogue: 0,0:01:18.95,0:01:19.82,Default,,0,0,0,,worked for them
+Dialogue: 0,0:01:19.82,0:01:20.69,Default,,0,0,0,,for 18 months.
+Dialogue: 0,0:01:20.69,0:01:21.32,Default,,0,0,0,,learning a lot
+Dialogue: 0,0:01:21.32,0:01:21.70,Default,,0,0,0,,and making
+Dialogue: 0,0:01:21.70,0:01:22.26,Default,,0,0,0,,some decent money,
+Dialogue: 0,0:01:22.26,0:01:22.83,Default,,0,0,0,,which was cool.

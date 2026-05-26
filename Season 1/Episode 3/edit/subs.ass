@@ -1,0 +1,119 @@
+[Script Info]
+Title: Webdune Diaries S01E03
+ScriptType: v4.00+
+PlayResX: 1080
+PlayResY: 1920
+WrapStyle: 0
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Default,Figtree SemiBold,60,&H00FFFFFF,&H000000FF,&H00000000,&H80000000,0,0,0,0,100,100,0,0,1,4,1,2,40,40,350
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:02.00,0:00:02.87,Default,,0,0,0,,I left without
+Dialogue: 0,0:00:02.87,0:00:03.46,Default,,0,0,0,,a bit
+Dialogue: 0,0:00:03.46,0:00:04.33,Default,,0,0,0,,of much direction
+Dialogue: 0,0:00:04.33,0:00:05.21,Default,,0,0,0,,and ended up
+Dialogue: 0,0:00:05.21,0:00:06.09,Default,,0,0,0,,cycling the country
+Dialogue: 0,0:00:06.09,0:00:06.96,Default,,0,0,0,,and it was
+Dialogue: 0,0:00:06.96,0:00:07.84,Default,,0,0,0,,a very intense
+Dialogue: 0,0:00:07.84,0:00:08.72,Default,,0,0,0,,and spiritual journey
+Dialogue: 0,0:00:08.72,0:00:09.59,Default,,0,0,0,,, where I
+Dialogue: 0,0:00:09.59,0:00:10.47,Default,,0,0,0,,felt like, "Oh,
+Dialogue: 0,0:00:10.47,0:00:11.35,Default,,0,0,0,,websites, that's not
+Dialogue: 0,0:00:11.35,0:00:12.23,Default,,0,0,0,,very purposeful. What,
+Dialogue: 0,0:00:12.23,0:00:13.26,Default,,0,0,0,,why am I
+Dialogue: 0,0:00:13.26,0:00:14.29,Default,,0,0,0,,making websites? I
+Dialogue: 0,0:00:14.29,0:00:15.32,Default,,0,0,0,,wanna, like, change
+Dialogue: 0,0:00:15.32,0:00:16.35,Default,,0,0,0,,the world and
+Dialogue: 0,0:00:16.35,0:00:17.38,Default,,0,0,0,,save peoples' lives."
+Dialogue: 0,0:00:17.38,0:00:18.09,Default,,0,0,0,,but then I
+Dialogue: 0,0:00:18.09,0:00:18.80,Default,,0,0,0,,went overseas for
+Dialogue: 0,0:00:18.80,0:00:19.51,Default,,0,0,0,,a little bit,
+Dialogue: 0,0:00:19.51,0:00:20.14,Default,,0,0,0,,a bit
+Dialogue: 0,0:00:20.14,0:00:20.77,Default,,0,0,0,,after that,
+Dialogue: 0,0:00:20.77,0:00:21.72,Default,,0,0,0,,and I was
+Dialogue: 0,0:00:21.72,0:00:22.67,Default,,0,0,0,,like, wait a
+Dialogue: 0,0:00:22.67,0:00:23.61,Default,,0,0,0,,second, people are
+Dialogue: 0,0:00:23.61,0:00:24.56,Default,,0,0,0,,struggling to make
+Dialogue: 0,0:00:24.56,0:00:25.51,Default,,0,0,0,,ends meet, not
+Dialogue: 0,0:00:25.51,0:00:26.46,Default,,0,0,0,,following their exact
+Dialogue: 0,0:00:26.46,0:00:27.41,Default,,0,0,0,,purpose in life
+Dialogue: 0,0:00:27.41,0:00:28.36,Default,,0,0,0,,or their dream
+Dialogue: 0,0:00:28.36,0:00:28.86,Default,,0,0,0,,and they're
+Dialogue: 0,0:00:28.86,0:00:29.37,Default,,0,0,0,,just battling
+Dialogue: 0,0:00:29.37,0:00:30.13,Default,,0,0,0,,to survive. Like,
+Dialogue: 0,0:00:30.13,0:00:30.89,Default,,0,0,0,,surely, I can
+Dialogue: 0,0:00:30.89,0:00:31.65,Default,,0,0,0,,make websites that
+Dialogue: 0,0:00:31.65,0:00:32.41,Default,,0,0,0,,I'm good at,
+Dialogue: 0,0:00:32.41,0:00:32.93,Default,,0,0,0,,and enjoy
+Dialogue: 0,0:00:32.93,0:00:33.46,Default,,0,0,0,,for a
+Dialogue: 0,0:00:33.46,0:00:34.25,Default,,0,0,0,,while and maybe
+Dialogue: 0,0:00:34.25,0:00:35.04,Default,,0,0,0,,some of that
+Dialogue: 0,0:00:35.04,0:00:35.83,Default,,0,0,0,,bigger impact stuff,
+Dialogue: 0,0:00:35.83,0:00:36.62,Default,,0,0,0,,some of that
+Dialogue: 0,0:00:36.62,0:00:37.41,Default,,0,0,0,,bigger picture stuff
+Dialogue: 0,0:00:37.41,0:00:38.20,Default,,0,0,0,,can come later.
+Dialogue: 0,0:00:38.20,0:00:38.62,Default,,0,0,0,,so that's,
+Dialogue: 0,0:00:38.62,0:00:39.26,Default,,0,0,0,,yeah, so there
+Dialogue: 0,0:00:39.26,0:00:39.90,Default,,0,0,0,,was about a
+Dialogue: 0,0:00:39.90,0:00:40.54,Default,,0,0,0,,year of limbo
+Dialogue: 0,0:00:40.54,0:00:41.18,Default,,0,0,0,,there and then
+Dialogue: 0,0:00:41.18,0:00:41.82,Default,,0,0,0,,I came back
+Dialogue: 0,0:00:41.82,0:00:42.47,Default,,0,0,0,,to building websites
+Dialogue: 0,0:00:42.47,0:00:43.12,Default,,0,0,0,,and projects started
+Dialogue: 0,0:00:43.12,0:00:43.77,Default,,0,0,0,,picking up better.
+Dialogue: 0,0:00:43.77,0:00:44.42,Default,,0,0,0,,There were, there
+Dialogue: 0,0:00:44.42,0:00:45.07,Default,,0,0,0,,were moments of,
+Dialogue: 0,0:00:45.07,0:00:45.73,Default,,0,0,0,,you know, "How
+Dialogue: 0,0:00:45.73,0:00:46.38,Default,,0,0,0,,am I gonna
+Dialogue: 0,0:00:46.38,0:00:47.03,Default,,0,0,0,,pay rent this
+Dialogue: 0,0:00:47.03,0:00:47.68,Default,,0,0,0,,week?" through that
+Dialogue: 0,0:00:47.68,0:00:48.34,Default,,0,0,0,,period, for sure.
+Dialogue: 0,0:00:48.34,0:00:49.01,Default,,0,0,0,,but now in
+Dialogue: 0,0:00:49.01,0:00:49.69,Default,,0,0,0,,these past maybe
+Dialogue: 0,0:00:49.69,0:00:50.36,Default,,0,0,0,,six months or
+Dialogue: 0,0:00:50.36,0:00:51.04,Default,,0,0,0,,so, things have
+Dialogue: 0,0:00:51.04,0:00:51.71,Default,,0,0,0,,been fairly steady,
+Dialogue: 0,0:00:51.71,0:00:52.39,Default,,0,0,0,,which has been
+Dialogue: 0,0:00:52.39,0:00:53.06,Default,,0,0,0,,awesome, and actually
+Dialogue: 0,0:00:53.06,0:00:53.74,Default,,0,0,0,,in the past
+Dialogue: 0,0:00:53.74,0:00:54.41,Default,,0,0,0,,two weeks, things
+Dialogue: 0,0:00:54.41,0:00:55.09,Default,,0,0,0,,have picked up,
+Dialogue: 0,0:00:55.09,0:00:55.75,Default,,0,0,0,,a lot,
+Dialogue: 0,0:00:55.75,0:00:56.75,Default,,0,0,0,,and I'll talk
+Dialogue: 0,0:00:56.75,0:00:57.75,Default,,0,0,0,,more about that
+Dialogue: 0,0:00:57.75,0:00:58.75,Default,,0,0,0,,next episode. But
+Dialogue: 0,0:00:58.75,0:00:59.76,Default,,0,0,0,,yeah, so a
+Dialogue: 0,0:00:59.76,0:01:00.28,Default,,0,0,0,,turbulent, time
+Dialogue: 0,0:01:00.28,0:01:01.08,Default,,0,0,0,,coming to where
+Dialogue: 0,0:01:01.08,0:01:01.87,Default,,0,0,0,,we are now,
+Dialogue: 0,0:01:01.87,0:01:02.66,Default,,0,0,0,,but so much
+Dialogue: 0,0:01:02.66,0:01:03.46,Default,,0,0,0,,learning and I,
+Dialogue: 0,0:01:03.46,0:01:04.25,Default,,0,0,0,,I wouldn't change
+Dialogue: 0,0:01:04.25,0:01:05.05,Default,,0,0,0,,it at all.
+Dialogue: 0,0:01:05.05,0:01:05.92,Default,,0,0,0,,yeah, things are
+Dialogue: 0,0:01:05.92,0:01:06.50,Default,,0,0,0,,always more
+Dialogue: 0,0:01:06.50,0:01:07.37,Default,,0,0,0,,bumpy than we
+Dialogue: 0,0:01:07.37,0:01:08.24,Default,,0,0,0,,expect, I think,
+Dialogue: 0,0:01:08.24,0:01:09.11,Default,,0,0,0,,and we learn
+Dialogue: 0,0:01:09.11,0:01:09.99,Default,,0,0,0,,our best lessons
+Dialogue: 0,0:01:09.99,0:01:10.86,Default,,0,0,0,,just going out
+Dialogue: 0,0:01:10.86,0:01:11.73,Default,,0,0,0,,and trying and
+Dialogue: 0,0:01:11.73,0:01:12.60,Default,,0,0,0,,doing it. So
+Dialogue: 0,0:01:12.60,0:01:13.48,Default,,0,0,0,,yeah, super excited
+Dialogue: 0,0:01:13.48,0:01:14.09,Default,,0,0,0,,to share more
+Dialogue: 0,0:01:14.09,0:01:14.50,Default,,0,0,0,,of this
+Dialogue: 0,0:01:14.50,0:01:14.91,Default,,0,0,0,,journey with
+Dialogue: 0,0:01:14.91,0:01:15.53,Default,,0,0,0,,you guys and
+Dialogue: 0,0:01:15.53,0:01:16.15,Default,,0,0,0,,talk about it,
+Dialogue: 0,0:01:16.15,0:01:17.03,Default,,0,0,0,,and talk about
+Dialogue: 0,0:01:17.03,0:01:17.62,Default,,0,0,0,,the day-to-day.
+Dialogue: 0,0:01:17.62,0:01:18.15,Default,,0,0,0,,thanks for
+Dialogue: 0,0:01:18.15,0:01:18.74,Default,,0,0,0,,all the support
+Dialogue: 0,0:01:18.74,0:01:19.14,Default,,0,0,0,,that has
+Dialogue: 0,0:01:19.14,0:01:19.54,Default,,0,0,0,,come through
+Dialogue: 0,0:01:19.54,0:01:20.37,Default,,0,0,0,,yeah, excited to
+Dialogue: 0,0:01:20.37,0:01:20.92,Default,,0,0,0,,keep you
+Dialogue: 0,0:01:20.92,0:01:21.47,Default,,0,0,0,,into this.

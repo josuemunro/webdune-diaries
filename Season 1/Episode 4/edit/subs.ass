@@ -1,0 +1,101 @@
+[Script Info]
+Title: Webdune Diaries S01E04
+ScriptType: v4.00+
+PlayResX: 1080
+PlayResY: 1920
+WrapStyle: 0
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Default,Figtree SemiBold,60,&H00FFFFFF,&H000000FF,&H00000000,&H80000000,0,0,0,0,100,100,0,0,1,4,1,2,40,40,350
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.00,0:00:00.80,Default,,0,0,0,,welcome finally
+Dialogue: 0,0:00:00.80,0:00:01.60,Default,,0,0,0,,to episode
+Dialogue: 0,0:00:01.60,0:00:02.81,Default,,0,0,0,,four of the
+Dialogue: 0,0:00:02.81,0:00:04.01,Default,,0,0,0,,Webdune Diaries in
+Dialogue: 0,0:00:04.01,0:00:05.22,Default,,0,0,0,,season one, the
+Dialogue: 0,0:00:05.22,0:00:06.42,Default,,0,0,0,,Fox Stevenson season.
+Dialogue: 0,0:00:06.42,0:00:07.66,Default,,0,0,0,,Webdune is a
+Dialogue: 0,0:00:07.66,0:00:08.49,Default,,0,0,0,,web agency,
+Dialogue: 0,0:00:08.49,0:00:09.31,Default,,0,0,0,,so we,
+Dialogue: 0,0:00:09.31,0:00:10.55,Default,,0,0,0,,develop, which is
+Dialogue: 0,0:00:10.55,0:00:11.78,Default,,0,0,0,,coding, building websites,
+Dialogue: 0,0:00:11.78,0:00:12.69,Default,,0,0,0,,on tools like
+Dialogue: 0,0:00:12.69,0:00:13.30,Default,,0,0,0,,Webflow, WordPress,
+Dialogue: 0,0:00:13.30,0:00:14.23,Default,,0,0,0,,Wix, Squarespace,
+Dialogue: 0,0:00:14.23,0:00:15.17,Default,,0,0,0,,usually Webflow.
+Dialogue: 0,0:00:15.17,0:00:15.81,Default,,0,0,0,,and we also
+Dialogue: 0,0:00:15.81,0:00:16.23,Default,,0,0,0,,design them.
+Dialogue: 0,0:00:16.23,0:00:16.87,Default,,0,0,0,,So there's a
+Dialogue: 0,0:00:16.87,0:00:17.52,Default,,0,0,0,,tool called Figma
+Dialogue: 0,0:00:17.52,0:00:18.56,Default,,0,0,0,,how do we
+Dialogue: 0,0:00:18.56,0:00:19.25,Default,,0,0,0,,make money?
+Dialogue: 0,0:00:19.25,0:00:19.94,Default,,0,0,0,,Usually, I'm
+Dialogue: 0,0:00:19.94,0:00:20.98,Default,,0,0,0,,subcontracting for a
+Dialogue: 0,0:00:20.98,0:00:22.02,Default,,0,0,0,,marketing agency or
+Dialogue: 0,0:00:22.02,0:00:23.06,Default,,0,0,0,,a digital agency
+Dialogue: 0,0:00:23.06,0:00:24.11,Default,,0,0,0,,or web agency.
+Dialogue: 0,0:00:24.11,0:00:25.14,Default,,0,0,0,,how do I
+Dialogue: 0,0:00:25.14,0:00:26.18,Default,,0,0,0,,get these jobs?
+Dialogue: 0,0:00:26.18,0:00:27.21,Default,,0,0,0,,Usually through Unicorn
+Dialogue: 0,0:00:27.21,0:00:28.25,Default,,0,0,0,,Factory. It's a
+Dialogue: 0,0:00:28.25,0:00:29.29,Default,,0,0,0,,freelancer marketplace based,
+Dialogue: 0,0:00:29.29,0:00:29.86,Default,,0,0,0,,in New Zealand,
+Dialogue: 0,0:00:29.86,0:00:31.19,Default,,0,0,0,,good high-quality leads,
+Dialogue: 0,0:00:31.19,0:00:32.10,Default,,0,0,0,,rather than the
+Dialogue: 0,0:00:32.10,0:00:32.70,Default,,0,0,0,,Fiverr situation
+Dialogue: 0,0:00:32.70,0:00:33.31,Default,,0,0,0,,of, you
+Dialogue: 0,0:00:33.31,0:00:34.22,Default,,0,0,0,,know, race to
+Dialogue: 0,0:00:34.22,0:00:35.13,Default,,0,0,0,,the bottom, I
+Dialogue: 0,0:00:35.13,0:00:36.04,Default,,0,0,0,,want a website
+Dialogue: 0,0:00:36.04,0:00:36.96,Default,,0,0,0,,for $5 situation.
+Dialogue: 0,0:00:36.96,0:00:37.94,Default,,0,0,0,,and then from
+Dialogue: 0,0:00:37.94,0:00:38.59,Default,,0,0,0,,Unicorn Factory,
+Dialogue: 0,0:00:38.59,0:00:39.58,Default,,0,0,0,,I've got ongoing
+Dialogue: 0,0:00:39.58,0:00:40.56,Default,,0,0,0,,relationships that I'll
+Dialogue: 0,0:00:40.56,0:00:41.54,Default,,0,0,0,,keep working with
+Dialogue: 0,0:00:41.54,0:00:42.53,Default,,0,0,0,,agencies or clients,
+Dialogue: 0,0:00:42.53,0:00:43.76,Default,,0,0,0,,I'm working for
+Dialogue: 0,0:00:43.76,0:00:45.00,Default,,0,0,0,,HNDRX. they're a
+Dialogue: 0,0:00:45.00,0:00:46.23,Default,,0,0,0,,web agency from
+Dialogue: 0,0:00:46.23,0:00:47.47,Default,,0,0,0,,Raglan. I'm doing
+Dialogue: 0,0:00:47.47,0:00:48.71,Default,,0,0,0,,some work with,
+Dialogue: 0,0:00:48.71,0:00:49.94,Default,,0,0,0,,Onsite Media, they're
+Dialogue: 0,0:00:49.94,0:00:51.18,Default,,0,0,0,,a marketing digital
+Dialogue: 0,0:00:51.18,0:00:52.42,Default,,0,0,0,,agency from Tauranga.
+Dialogue: 0,0:00:52.42,0:00:52.95,Default,,0,0,0,,doing a
+Dialogue: 0,0:00:52.95,0:00:53.75,Default,,0,0,0,,little bit of
+Dialogue: 0,0:00:53.75,0:00:54.55,Default,,0,0,0,,work for Launch
+Dialogue: 0,0:00:54.55,0:00:55.35,Default,,0,0,0,,Agency, they're a
+Dialogue: 0,0:00:55.35,0:00:56.14,Default,,0,0,0,,big marketing agency,
+Dialogue: 0,0:00:56.14,0:00:56.79,Default,,0,0,0,,from Hamilton.
+Dialogue: 0,0:00:56.79,0:00:57.43,Default,,0,0,0,,And then
+Dialogue: 0,0:00:57.43,0:00:58.39,Default,,0,0,0,,in terms of
+Dialogue: 0,0:00:58.39,0:00:59.35,Default,,0,0,0,,direct clients, I'm
+Dialogue: 0,0:00:59.35,0:01:00.31,Default,,0,0,0,,doing some work
+Dialogue: 0,0:01:00.31,0:01:01.27,Default,,0,0,0,,for Legend Story.
+Dialogue: 0,0:01:01.27,0:01:01.86,Default,,0,0,0,,a landing
+Dialogue: 0,0:01:01.86,0:01:02.44,Default,,0,0,0,,page design.
+Dialogue: 0,0:01:02.44,0:01:03.27,Default,,0,0,0,,And then a
+Dialogue: 0,0:01:03.27,0:01:04.09,Default,,0,0,0,,little bit of
+Dialogue: 0,0:01:04.09,0:01:04.92,Default,,0,0,0,,work with SellMyCell.
+Dialogue: 0,0:01:04.92,0:01:05.74,Default,,0,0,0,,We just wrapped
+Dialogue: 0,0:01:05.74,0:01:06.57,Default,,0,0,0,,up a massive
+Dialogue: 0,0:01:06.57,0:01:07.39,Default,,0,0,0,,phase two new
+Dialogue: 0,0:01:07.39,0:01:08.21,Default,,0,0,0,,website for them.
+Dialogue: 0,0:01:08.21,0:01:08.93,Default,,0,0,0,,Constantly working with
+Dialogue: 0,0:01:08.93,0:01:09.64,Default,,0,0,0,,Spirit of Douglas,
+Dialogue: 0,0:01:09.64,0:01:11.16,Default,,0,0,0,,a cool plane,
+Dialogue: 0,0:01:11.16,0:01:12.17,Default,,0,0,0,,so not-for-profit,
+Dialogue: 0,0:01:12.17,0:01:13.24,Default,,0,0,0,,so next episode,
+Dialogue: 0,0:01:13.24,0:01:13.75,Default,,0,0,0,,it would
+Dialogue: 0,0:01:13.75,0:01:14.50,Default,,0,0,0,,be awesome to
+Dialogue: 0,0:01:14.50,0:01:15.25,Default,,0,0,0,,show you guys
+Dialogue: 0,0:01:15.25,0:01:16.00,Default,,0,0,0,,what I do
+Dialogue: 0,0:01:16.00,0:01:16.75,Default,,0,0,0,,day to day.
+Dialogue: 0,0:01:16.75,0:01:17.94,Default,,0,0,0,,portfolio, a bit
+Dialogue: 0,0:01:17.94,0:01:18.73,Default,,0,0,0,,of a
+Dialogue: 0,0:01:18.73,0:01:19.92,Default,,0,0,0,,showcase, maybe some
+Dialogue: 0,0:01:19.92,0:01:21.10,Default,,0,0,0,,fancy swirling animations,

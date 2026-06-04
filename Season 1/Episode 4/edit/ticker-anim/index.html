@@ -1,0 +1,155 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=528, height=464" />
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.14.2/dist/gsap.min.js"></script>
+    <style>
+      @font-face {
+        font-family: 'Figtree';
+        src: url('assets/Figtree-SemiBold.ttf') format('truetype');
+        font-weight: 600;
+        font-style: normal;
+      }
+
+      * { margin: 0; padding: 0; box-sizing: border-box; }
+
+      html, body {
+        margin: 0;
+        width: 528px;
+        height: 464px;
+        overflow: hidden;
+        background: #00FF00;
+      }
+
+      .pill {
+        position: absolute;
+        left: 70px;
+        top: 228px;
+        width: 283px;
+        height: 75px;
+        border-radius: 38px;
+        overflow: hidden;
+        background: white;
+        box-shadow: inset 0 4px 8px rgba(0, 0, 0, 0.35);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      .digits {
+        display: flex;
+        align-items: center;
+        gap: 0px;
+        height: 75px;
+      }
+
+      .reel-window {
+        width: 44px;
+        height: 75px;
+        overflow: hidden;
+        position: relative;
+      }
+
+      .reel-strip {
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+      }
+
+      .digit {
+        width: 44px;
+        height: 75px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-family: 'Figtree', sans-serif;
+        font-weight: 700;
+        font-size: 52px;
+        color: rgb(51, 51, 51);
+        flex-shrink: 0;
+      }
+    </style>
+  </head>
+  <body>
+    <div
+      id="root"
+      data-composition-id="ticker"
+      data-start="0"
+      data-duration="3"
+      data-width="528"
+      data-height="464"
+    >
+      <div id="pill" class="clip pill" data-start="0" data-duration="3" data-track-index="1">
+        <div class="digits">
+          <!-- Reel 1 (hundreds): 0 → spin → 0 -->
+          <div class="reel-window">
+            <div class="reel-strip" id="reel1">
+              <div class="digit">0</div>
+              <div class="digit">9</div>
+              <div class="digit">8</div>
+              <div class="digit">7</div>
+              <div class="digit">0</div>
+            </div>
+          </div>
+
+          <!-- Reel 2 (tens): 0 → spin → 0 -->
+          <div class="reel-window">
+            <div class="reel-strip" id="reel2">
+              <div class="digit">0</div>
+              <div class="digit">9</div>
+              <div class="digit">8</div>
+              <div class="digit">7</div>
+              <div class="digit">6</div>
+              <div class="digit">5</div>
+              <div class="digit">0</div>
+            </div>
+          </div>
+
+          <!-- Reel 3 (units): 0 → spin → 4 -->
+          <div class="reel-window">
+            <div class="reel-strip" id="reel3">
+              <div class="digit">0</div>
+              <div class="digit">9</div>
+              <div class="digit">8</div>
+              <div class="digit">7</div>
+              <div class="digit">6</div>
+              <div class="digit">5</div>
+              <div class="digit">4</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      window.__timelines = window.__timelines || {};
+      const tl = gsap.timeline({ paused: true });
+
+      const SLOT_H = 75;
+
+      tl.to("#reel1", {
+        y: -(4 * SLOT_H),
+        duration: 0.57,
+        ease: "back.out(1.4)",
+      }, 0.05);
+
+      tl.to("#reel2", {
+        y: -(6 * SLOT_H),
+        duration: 0.68,
+        ease: "back.out(1.5)",
+      }, 0.1);
+
+      tl.to("#reel3", {
+        y: -(6 * SLOT_H),
+        duration: 0.68,
+        ease: "back.out(1.7)",
+      }, 0.15);
+
+      window.__timelines["ticker"] = tl;
+    </script>
+  </body>
+</html>

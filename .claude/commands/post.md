@@ -30,8 +30,8 @@ Structure:
 - **Line 4**: Call to action or teaser for next episode
 - **Line 5**: Hashtags
 
-Required hashtags: `#webdune #webdesign #agencylife #buildingInPublic #webdunediaries`
-Optional extras based on episode content: `#freelancer #solopreneur #webdeveloper #nztech`
+Required hashtags: `#webdunediaries #webdev #webdesign #buildingInPublic #freelancer`
+Optional extras based on episode content: `#solopreneur #webdeveloper #nztech #agencylife`
 
 If the episode mentions Fox Stevenson, tag `@foxstevenson` in the caption.
 
